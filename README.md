@@ -10,13 +10,17 @@ Fictional example site utilising Handlebars.js templating language. This project
 
 ## Getting started
  * Download the files; 
- * Open the "musicon" directory in your IDE; and
+ * Open the "musicon" directory in your IDE;
+ * Follow download instructions at handlebarsjs.com; 
+ * Add handlebars.js to the root directory; and
  * Open "index.html" with your local development server ([or install this one](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)).
 
 ## Stack
 * HTML
 * CSS
 * Javascript
+
+## Dependencies
 * Handlebars.js
 
 ## Attributions
