@@ -82,17 +82,17 @@ header nav a:hover, header nav a:focus {
   transition: opacity 0.3s;
 }
 
-main#welcome {
+main {
   text-align: center;
   max-width: 700px;
 }
 
-main#welcome h2 {
+main h2 {
   font-size: 1.8em;
   margin-block: 5%;
 }
 
-main#welcome a {
+main a {
   background-color: #4c7ef3;
   display: inline-block;
   text-transform: uppercase;
@@ -102,16 +102,45 @@ main#welcome a {
   border-radius: 0.3em;
 }
 
-main#welcome a:hover, main#welcome a:focus {
+main a:hover, main a:focus {
   outline: none;
   background-color: #26a69a;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
 
+main article {
+  margin-top: 8%;
+}
+
+main article img {
+  width: 35px;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+
+main article:last-child img {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+main article address {
+  font-style: normal;
+  line-height: 1.2rem;
+  margin-top: 0.5rem;
+}
+
 footer {
   text-align: center;
-  margin-bottom: 1em;
+  margin-block: 0.6em;
+}
+
+@media only screen and (min-width: 400px) {
+  main article img {
+    width: 60px;
+    -webkit-transition: width 2s;
+    transition: width 2s;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -123,14 +152,13 @@ footer {
   header nav a {
     padding-block: 1.5em;
   }
-  main#welcome h2 {
+  main h2 {
     font-size: 3em;
   }
-  main#welcome p {
+  main p {
     font-weight: 500;
-    font-size: 1.125em;
   }
-  main#welcome > * {
+  main > * {
     -webkit-transition: all 1s;
     transition: all 1s;
   }

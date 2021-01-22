@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="handlebars.js" defer></script>
-    <script src="script.js" defer></script>
-    <script type="text/x-handlebars-template" id="templateHB" defer>
+    <script type="text/x-handlebars-template" data-template-hb defer>
       <!-- Handlebars template -->
       <h2>
         {{ homepage.title }}
@@ -20,6 +19,7 @@
         Shop Now
       </a>
     </script>
+    <script src="script.js" defer></script>
     <title>Musicon | Home</title>
   </head>
   <body>
@@ -33,7 +33,7 @@
         </ul>
       </nav>
     </header>
-    <main id="information-hb">
+    <main data-target-hb>
       <!-- Compiled HTML (Handlebars) -->
     </main>
     <footer>
