@@ -14,12 +14,12 @@
           <h3>{{this.name}}</h3>
           <p>{{this.description}}</p>
           {{#if this.salePrice}}
+          <span>On sale!</span>
           <p>
             Price:
             <del>{{this.price}}</del>
             <span>{{this.salePrice}}</span>
           </p>
-          <span>On sale!</span>
           {{else}}
           <p>Price: {{this.price}}</p>
           {{/if}}
