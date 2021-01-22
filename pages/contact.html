@@ -4,6 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
+    <script src="../handlebars.js" defer></script>
+    <script type="text/x-handlebars-template" data-template-hb defer>
+      <!-- Handlebars template -->
+      <h2>{{ contact.title }}</h2>
+      <p>{{ contact.body }}</p>
+      <article>
+        <img src="../images/icons/icon-phone.svg" alt="Telephone:" />
+        <address>{{ contact.phone }}</address>
+      </article>
+      <article>
+        <img src="../images/icons/icon-mail.svg" alt="Email:" />
+        <address>{{  contact.email }}</address>
+      </article>
+      <article>
+        <img src="../images/icons/icon-location.svg" alt="Mail:" />
+        <address>
+          Musicon,
+          <br />
+          {{ contact.street }}
+          <br />
+          {{ contact.city }}, 
+          {{ contact.province }} 
+          {{ contact.postcode }}
+        </address>
+      </article>
+    </script>
+    <script src="../script.js" defer></script>
+
     <title>Musicon | Contact Us</title>
   </head>
   <body>
@@ -17,30 +45,8 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <h2>Let's get in touch!</h2>
-      <p>
-        Ready to start purchasing your musical instruments on Musicon? That's
-        great! Give us a call or send us an email and we will get back to you as
-        soon as possible!
-      </p>
-
-      <article>
-        <img src="../icons/icon-phone.svg" alt="Telephone:" />
-        <address>123-456-7890</address>
-      </article>
-      <article>
-        <img src="../icons/icon-mail.svg" alt="Email:" />
-        <address>feedback@musicon.com</address>
-      </article>
-      <article>
-        <img src="../icons/icon-location.svg" alt="Mail:" />
-        <address>
-          Musicon,<br />
-          Suite 33, 111 Music Rd,<br />
-          New York, NY 11111
-        </address>
-      </article>
+    <main data-target-hb>
+      <!-- Compiled HTML (Handlebars) -->
     </main>
     <footer>
       <p>&copy; Musicon</p>
