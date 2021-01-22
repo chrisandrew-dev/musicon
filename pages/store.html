@@ -3,7 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../handlebars.js" defer></script>
+    <script type="text/x-handlebars-template" data-template-hb defer>
+      <!-- Handlebars template -->
+      {{#each store.products}}
+      <article class="product">
+        <img src="{{this.image}}" alt="{{this.name}}" />
+        <div class="details">
+          <h3>{{this.name}}</h3>
+          <p>{{this.description}}</p>
+          {{#if this.salePrice}}
+          <p>
+            Price:
+            <del>{{this.price}}</del>
+            <span>{{this.salePrice}}</span>
+          </p>
+          <span>On sale!</span>
+          {{else}}
+          <p>Price: {{this.price}}</p>
+          {{/if}}
+        </div>
+      </article>
+      {{/each}}
+    </script>
+    <script src="../script.js" defer></script>
     <title>Musicon | Store</title>
   </head>
   <body>
@@ -17,8 +41,8 @@
         </ul>
       </nav>
     </header>
-    <main>
-
+    <main data-target-hb>
+      <!-- Compiled HTML (Handlebars) -->
     </main>
     <footer>
       <p>&copy; Musicon</p>
