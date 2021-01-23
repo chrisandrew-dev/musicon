@@ -3,28 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Musicon is a fictional online music store showcasing how Handlebars.js templating library can be used to avoid repetitive development work and enable easy updates to online content subject to change frequently."
+    />
     <link rel="stylesheet" href="../style.css" />
     <script src="../handlebars.min.js" defer></script>
     <script type="text/x-handlebars-template" data-template-hb defer>
       <!-- Handlebars template -->
       {{#each store.products}}
-      <article class="product">
-        <img src="{{this.image}}" alt="{{this.name}}" />
-        <div class="details">
-          <h3>{{this.name}}</h3>
-          <p>{{this.description}}</p>
-          {{#if this.salePrice}}
-          <span>On sale!</span>
-          <p>
-            Price:
-            <del>{{this.price}}</del>
-            <span>{{this.salePrice}}</span>
-          </p>
-          {{else}}
-          <p>Price: {{this.price}}</p>
-          {{/if}}
-        </div>
-      </article>
+        <article class="product">
+          <img src="{{this.image}}" alt="{{this.name}}" />
+          <div class="details">
+            <h3>
+              {{this.name}}
+            </h3>
+            <p>
+              {{this.description}}
+            </p>
+            {{#if this.salePrice}}
+              <span>
+                On sale!
+              </span>
+              <p>
+                Price:
+                <del>
+                  {{this.price}}
+                </del>
+                <span>
+                  {{this.salePrice}}
+                </span>
+              </p>
+            {{else}}
+              <p>
+                Price: {{this.price}}
+              </p>
+            {{/if}}
+          </div>
+        </article>
       {{/each}}
     </script>
     <script src="../script.js" defer></script>
