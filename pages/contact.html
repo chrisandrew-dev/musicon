@@ -4,29 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
-    <script src="../handlebars.js" defer></script>
+    <script src="../handlebars.min.js" defer></script>
     <script type="text/x-handlebars-template" data-template-hb defer>
       <!-- Handlebars template -->
-      <h2>{{ contact.title }}</h2>
-      <p>{{ contact.body }}</p>
+      <h2>
+        {{contact.title}}
+      </h2>
+      <p>
+        {{contact.body}}
+      </p>
       <article>
         <img src="../images/icons/icon-phone.svg" alt="Telephone:" />
-        <address>{{ contact.phone }}</address>
+        <address>
+          {{contact.phone}}
+        </address>
       </article>
       <article>
         <img src="../images/icons/icon-mail.svg" alt="Email:" />
-        <address>{{  contact.email }}</address>
+        <address>
+          {{contact.email}}
+        </address>
       </article>
       <article>
         <img src="../images/icons/icon-location.svg" alt="Mail:" />
         <address>
           Musicon,
           <br />
-          {{ contact.street }}
+          {{contact.street}}
           <br />
-          {{ contact.city }}, 
-          {{ contact.province }} 
-          {{ contact.postcode }}
+          {{contact.city}},
+          {{contact.province}}
+          {{contact.postcode}}
         </address>
       </article>
     </script>
