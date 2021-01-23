@@ -7,8 +7,9 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: black url("images/musicon_bg.png") top/cover no-repeat;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+ Arial, sans-serif;
+  background: black url("images/musicon_bg.jpg") top/cover no-repeat;
   background-attachment: fixed;
   color: white;
   height: 100vh;
